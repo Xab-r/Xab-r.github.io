@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xabr</title>
+</head>
+<body>
+	<style type="text/css">
+		body {
+			background-color: #000;
+		}
+
+		#content {
+			display: flex;
+			justify-content: center;
+			margin: 20%;
+		}
+
+		h1 {
+			width: 22ch;
+			color: #fff;
+			font-family: monospace;
+			font-size: 3em;
+			white-space: nowrap;
+			overflow: hidden;
+			border-right: 4px solid orange;
+			animation: border 0.80s step-end infinite, 
+			text 5s steps(22);
+		}
+
+		@keyframes border {
+			0% {
+				border-color: orange;
+			}
+			50% {
+				border-color: transparent; 
+			}
+			100% {
+				border-color: orange;
+			}
+		}
+
+		@keyframes text {
+			0% {
+				width: 0;
+			}
+		}	
+	</style>
+
+	<div id="content">
+		<h1>Xabr приветсвует тебя!</h1>
+	</div>
+
+		<div class="img"></div>
+</body>
+</html>
