@@ -5,17 +5,16 @@
 	<title>Xabr</title>
 </head>
 <body>
+	<!-- ПРИВЕТСТВЕННЫЙ ТЕКСТ -->
 	<style type="text/css">
 		body {
-			background-color: #000;
+			background-color: black;
 		}
-
 		#content {
 			display: flex;
 			justify-content: center;
 			margin: 20%;
 		}
-
 		h1 {
 			width: 22ch;
 			color: #fff;
@@ -27,7 +26,6 @@
 			animation: border 0.80s step-end infinite, 
 			text 3s steps(22);
 		}
-
 		@keyframes border {
 			0% {
 				border-color: orange;
@@ -46,11 +44,54 @@
 			}
 		}	
 	</style>
-
 	<div id="content">
 		<h1>Xabr приветсвует тебя!</h1>
 	</div>
-
-		<div class="img"></div>
+	<!-- АНИМАЦИЯ  -->
+	<style type="text/css">
+		.anim {
+			width: 120px ;
+			height: 120px;
+			border: 2px solid transparent;
+			border-radius: 50%;
+			/*border-top-color:  #00ff00;*/
+			box-shadow: 2px 2px 3px  #ff3300;
+			position: relative;
+			animation: preloader 2.70s infinite ease-out;
+		}
+		.anim:after, .anim:before{
+			content: '';
+			position: absolute;
+			border: 2px solid transparent;
+			border-radius: 50%;
+		}
+		.anim:after{
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			/*border-top-color: #ffff00;*/
+			box-shadow: 2px 2px 3px  #00ff00;
+			animation: preloader 2.40s infinite ease-out;
+		}
+		.anim:before{
+			top: 22px;
+			left: 22px;
+			right: 22px;
+			bottom: 22px;
+			/*border-top-color: #ff3300;*/
+			box-shadow: 2px 2px 3px  #ffff00;
+			animation: preloader 1.79s infinite ease-out;
+		}
+		@keyframes preloader {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	<div class="anim"></div>
 </body>
 </html>
