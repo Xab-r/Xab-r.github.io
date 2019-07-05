@@ -1,4 +1,4 @@
 # Xab-r.github.io
 Мой первый сайт
 
-[Hello](http://example.com)
+[Hello](https://xab-r.github.io/index.html)
